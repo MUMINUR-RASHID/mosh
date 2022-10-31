@@ -1,0 +1,68 @@
+.photo{
+    display: grid;
+    grid-template: repeat(3, 50vw)/repeat(2,50vw);
+    border: 2px solid black;
+    grid-template-areas: 
+    "first second" 
+    "third second" 
+    "fifth sixth";
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    
+}
+img{
+    object-fit: cover;
+}
+
+#one{
+    grid-area: second;
+    height: 100%;
+    width: 100%;
+    
+}
+#two{
+    grid-area:fifth;
+    height: 100%;
+    width: 100%;
+    
+}
+#three{
+    height: 100%;
+    width: 100%;
+    
+    grid-area: first;
+}
+#four{
+    height: 100%;
+    width: 100%;
+    
+    grid-area: sixth;
+}
+#five{
+    height: 100%;
+    width: 100%;
+    
+    grid-area: third;
+}
+
+@media screen and (min-width: 1024px) {
+  .photo{
+    grid-template: repeat(5, 100vh)/repeat(1,100vw);
+    grid-template-areas: 
+    "first"
+    "second" 
+    "third"
+    "fourth"
+    "fifth" ;
+  }  
+  #four{
+    grid-area: fourth;
+  }
+  #one
+  {
+    object-fit:none;
+  }
+}
